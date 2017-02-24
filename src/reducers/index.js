@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import words from './words';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({ words });
 
 export default rootReducer;
