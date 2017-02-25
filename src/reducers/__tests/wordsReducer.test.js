@@ -1,6 +1,5 @@
 import reducer from '../words';
 import { wordAdd, wordRemove } from '../../actions/words';
-import { WORD_ADD, WORD_REMOVE } from '../../constants/ActionTypes';
 
 describe('Words Reducer', () => {
   it('should handle WORD_ADD', () => {
