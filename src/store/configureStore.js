@@ -1,7 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
-const middleware = [];
+const middleware = [thunk];
 let applyMiddlewareConfig = applyMiddleware(...middleware);
 
 if (process.env.NODE_ENV !== 'production') {

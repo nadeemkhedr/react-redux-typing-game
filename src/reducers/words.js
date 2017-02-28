@@ -39,3 +39,9 @@ const wordsReducer = combineReducers({
 });
 
 export default wordsReducer;
+
+export const getAllWords = state =>
+  state.allIds.map(id => state.byId[id]);
+
+export const getMatchingWords = (state, text) =>
+  getAllWords(state).filter(w => w.text === text);

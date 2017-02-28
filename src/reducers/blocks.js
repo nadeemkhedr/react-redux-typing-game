@@ -49,3 +49,9 @@ const blocksReducer = combineReducers({
 });
 
 export default blocksReducer;
+
+export const getAllBlocks = state =>
+  state.allIds.map(id => state.byId[id]);
+
+export const getEmptyBlocks = state =>
+  getAllBlocks(state).filter(b => b.words.length === 0);
