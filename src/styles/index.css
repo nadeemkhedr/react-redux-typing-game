@@ -3,6 +3,26 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+input {
+  height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 195px;
+}
+
+.block {
+  width: 200px;
+  background: #49505a;
+  font-size: 18px;
+  color: #ddd;
+  font-family: Raleway, sans-serif;
+  margin-top: 10px;
+}
+.word {
+  padding: 14px 22px;
+}
+
 .match {
-  color: red;
+  color: #3ab4a6;
 }

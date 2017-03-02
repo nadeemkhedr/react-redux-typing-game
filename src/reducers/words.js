@@ -45,3 +45,6 @@ export const getAllWords = state =>
 
 export const getMatchingWords = (state, text) =>
   getAllWords(state).filter(w => w.text === text);
+
+export const getWordsForBlock = (state, blockId) =>
+  getAllWords(state).filter(w => w.blockId === blockId);
