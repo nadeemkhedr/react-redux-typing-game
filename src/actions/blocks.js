@@ -1,3 +1,5 @@
+import shortid from 'shortid';
+import randomWord from 'random-word-by-length';
 import {
   BLOCK_ADD,
   BLOCK_REMOVE,
@@ -9,6 +11,11 @@ export const blockAdd = block => ({
   id: block.id,
   words: block.words || []
 });
+
+export const blockGenerate = () => (dispatch, getState) => {
+  console.log(shortid.generate());
+  console.log(randomWord(10));
+};
 
 export const blockRemove = id => ({ type: BLOCK_REMOVE, id });
 export const blockWordRemove = (id, wordId) =>
