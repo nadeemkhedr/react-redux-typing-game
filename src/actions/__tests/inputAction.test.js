@@ -44,20 +44,33 @@ describe('input actions', () => {
     });
   });
 
-  it.only('create BLOCK_REMOVE when a block does not have any words', () => {
+  // TODO: need a real reducer for it to work
+  it.skip('create BLOCK_REMOVE when the last word is matched in a block', () => {
+    const state = {
+      words: {
+        byId: {
+          1: {
+            id: 1,
+            text: 'first'
+          },
+        },
+        allIds: [1]
+      },
+      blocks: {
+        byId: {
+          1: {
+            id: 1,
+            words: [1]
+          }
+        },
+        allIds: [1]
+      },
+      input: { text: '' }
+    };
+
     const actions = {
       type: types.BLOCK_REMOVE,
       id: 1
-    };
-    let state = {...initialState};
-    state.blocks = {
-      byId: {
-        1: {
-          id: 1,
-          words: []
-        }
-      },
-      allIds: [1]
     };
     const store = mockStore(state);
     store.dispatch(textUpdate('first'));
@@ -71,12 +84,10 @@ const initialState = {
     byId: {
       1: {
         id: 1,
-        blockId: 1,
         text: 'first'
       },
       2: {
         id: 2,
-        blockId: 1,
         text: 'second'
       }
     },

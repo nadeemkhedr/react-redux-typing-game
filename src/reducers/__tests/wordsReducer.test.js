@@ -5,7 +5,6 @@ describe('Words Reducer', () => {
   it('should handle WORD_ADD', () => {
     const newWord = {
       id: 1,
-      blockId: 1,
       text: 'word'
     };
     const expectedState = {
@@ -22,7 +21,6 @@ describe('Words Reducer', () => {
   it('should handle WORD_REMOVE', () => {
     const wordToRemove = {
       id: 1,
-      blockId: 1,
       text: 'word'
     };
     const oldState = {
@@ -43,7 +41,6 @@ describe('Words Reducer', () => {
   it('return same state with unkown actions', () => {
     const word = {
       id: 1,
-      blockId: 1,
       text: 'word'
     };
     const state = {

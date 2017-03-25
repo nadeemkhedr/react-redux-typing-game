@@ -53,5 +53,8 @@ export default blocksReducer;
 export const getAllBlocks = state =>
   state.allIds.map(id => state.byId[id]);
 
+export const getBlockHasWord = (state, wordId) =>
+  getAllBlocks(state).find(block => block.words.includes(wordId));
+
 export const getEmptyBlocks = state =>
   getAllBlocks(state).filter(b => b.words.length === 0);
