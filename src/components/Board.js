@@ -8,7 +8,9 @@ const Board = ({blocks, generateBlock}) => {
 
   return (
     <div>
-      {blockEls}
+      <div className="blocks">
+        {blockEls}
+      </div>
       <button onClick={generateBlock}>Generate Block</button>
     </div>
   );
