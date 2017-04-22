@@ -1,6 +1,6 @@
 import { getMatchingWords, getEmptyBlocks, getBlockHasWord } from '../reducers';
 import { wordRemove } from './words';
-import { blockRemove, blockWordRemove } from './blocks';
+import { blockRemove, blockWordRemove, blockGenerate } from './blocks';
 
 export const inputUpdate = text => ({ type: 'INPUT_UPDATE', text });
 
@@ -16,6 +16,9 @@ export const textUpdate = text => (dispatch, getState) => {
     });
     dispatch(inputUpdate(''));
     const emptyBlocks = getEmptyBlocks(getState());
-    emptyBlocks.forEach(b => dispatch(blockRemove(b.id)));
+    emptyBlocks.forEach(b => {
+      dispatch(blockRemove(b.id));
+      dispatch(blockGenerate());
+    });
   }
 };
