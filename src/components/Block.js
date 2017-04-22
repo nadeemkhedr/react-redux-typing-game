@@ -1,4 +1,5 @@
 import React from 'react';
+import BlockTimer from './BlockTimer';
 import WordContainer from '../containers/WordContainer'
 
 const Block = ({words}) => {
@@ -8,8 +9,14 @@ const Block = ({words}) => {
     )
   });
 
+  const blockExpire = () => {
+  };
+
   return (
     <div className="block">
+      <div className="blockTimer">
+        <BlockTimer time={10} onFinish={blockExpire} />
+      </div>
       {wordEls}
     </div>
   );
