@@ -3,22 +3,18 @@ export default {
     byId: {
       1: {
         id: 1,
-        blockId: 1,
         text: 'first'
       },
       2: {
         id: 2,
-        blockId: 1,
         text: 'second'
       },
       3: {
         id: 3,
-        blockId: 2,
         text: 'other'
       },
       4: {
         id: 4,
-        blockId: 2,
         text: 'someone'
       }
     },

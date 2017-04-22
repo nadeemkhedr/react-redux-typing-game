@@ -5,24 +5,32 @@ body {
 }
 
 input {
-  height: 30px;
-  font-size: 20px;
+  height: 100px;
+  font-size: 40px;
   margin-top: 10px;
-  width: 195px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
-.block {
-  width: 200px;
-  background: #49505a;
-  font-size: 18px;
-  color: #ddd;
-  font-family: Raleway, sans-serif;
-  margin-top: 10px;
-}
 .word {
   padding: 14px 22px;
 }
 
 .match {
   color: #3ab4a6;
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 5px;
+}
+
+.block {
+  background: #49505a;
+  font-size: 18px;
+  color: #ddd;
+  font-family: Raleway, sans-serif;
+  margin-top: 10px;
 }

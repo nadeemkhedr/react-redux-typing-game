@@ -8,7 +8,6 @@ const byId = (state = {}, action) => {
         ...state,
         [action.id]: {
           id: action.id,
-          blockId: action.blockId,
           text: action.text
         }
       };
@@ -41,10 +40,10 @@ const wordsReducer = combineReducers({
 export default wordsReducer;
 
 export const getAllWords = state =>
-  state.allIds.map(id => state.byId[id]);
+  state.allIds.map(id => ({...state.byId[id]}));
+
+export const getWordsByIds = (state, wordsIds) =>
+  wordsIds.map(id => ({...state.byId[id]}));
 
 export const getMatchingWords = (state, text) =>
   getAllWords(state).filter(w => w.text === text);
-
-export const getWordsForBlock = (state, blockId) =>
-  getAllWords(state).filter(w => w.blockId === blockId);

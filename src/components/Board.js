@@ -3,13 +3,11 @@ import BlockContainer from '../containers/BlockContainer';
 
 const Board = ({blocks}) => {
   const blockEls = blocks.map(block => {
-    return (
-      <BlockContainer block={block} key={block.id} />
-    )
+    return <BlockContainer block={block} key={block.id} />
   });
 
   return (
-    <div>
+    <div className="blocks">
       {blockEls}
     </div>
   );

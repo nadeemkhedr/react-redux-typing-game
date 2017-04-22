@@ -14,11 +14,15 @@ export default rootReducer;
 export const getMatchingWords = (state, text) =>
   fromWords.getMatchingWords(state.words, text);
 
-export const getWordsForBlock = (state, blockId) =>
-  fromWords.getWordsForBlock(state.words, blockId);
+export const getWordsForBlock = (state, words) =>
+  fromWords.getWordsByIds(state.words, words);
 
 export const getAllBlocks = state =>
   fromBlocks.getAllBlocks(state.blocks);
 
 export const getEmptyBlocks = state =>
   fromBlocks.getEmptyBlocks(state.blocks);
+
+export const getBlockHasWord = (state, wordId) =>
+  fromBlocks.getBlockHasWord(state.blocks, wordId);
+
