@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { calculatePercentage }from '../utils/numberUtils';
 import PieChart from 'react-minimal-pie-chart';
 
@@ -10,7 +10,7 @@ class BlockTimer extends Component {
   }
 
   componentDidMount() {
-    this.timer = setInterval(this.tick, 1000)
+    this.timer = setInterval(this.tick, 1000);
   }
 
   componentWillUnmount() {
@@ -45,7 +45,7 @@ class BlockTimer extends Component {
     clearInterval(this.timer);
   }
 
-  render () {
+  render() {
     const percentage = calculatePercentage(this.state.time, this.props.time);
     return (
         <PieChart data={this.getChartData(percentage)}
