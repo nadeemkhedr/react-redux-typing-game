@@ -50,7 +50,8 @@ class BlockTimer extends Component {
     return (
         <PieChart data={this.getChartData(percentage)}
           reveal={percentage}
-          style={{ height: '50px' }}
+          radius={30}
+          style={{ height: '40px' }}
           animate
         />
     );

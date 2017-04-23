@@ -7,8 +7,10 @@ const Board = ({blocks}) => {
   });
 
   return (
-    <div className="blocks">
-      {blockEls}
+    <div className="board">
+      <div className="blocks">
+        {blockEls}
+      </div>
     </div>
   );
 };

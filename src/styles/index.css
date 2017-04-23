@@ -21,6 +21,11 @@ input {
   color: #3ab4a6;
 }
 
+.board {
+  display: flex;
+  justify-content: center;
+}
+
 .blocks {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
@@ -39,9 +44,8 @@ input {
 .blockTimer {
   position: absolute;
   right: -25px;
-  top: -22px;
-  width: 50px;
-
+  top: 0px;
+  width: 40px;
   background: #49505a;
-  border-radius: 25px;
+  border-radius: 15px;
 }
