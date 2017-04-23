@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
   font-family: sans-serif;
 }
 
@@ -21,10 +21,15 @@ input {
   color: #3ab4a6;
 }
 
+.board {
+  display: flex;
+  justify-content: center;
+}
+
 .blocks {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
-  grid-gap: 5px;
+  grid-gap: 50px;
 }
 
 .block {
@@ -33,4 +38,14 @@ input {
   color: #ddd;
   font-family: Raleway, sans-serif;
   margin-top: 10px;
+  position: relative;
+}
+
+.blockTimer {
+  position: absolute;
+  right: -25px;
+  top: 0px;
+  width: 40px;
+  background: #49505a;
+  border-radius: 15px;
 }
