@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BlockTimer from './BlockTimer';
 import WordContainer from '../containers/WordContainer'
 
@@ -23,7 +24,7 @@ const Block = ({words}) => {
 };
 
 Block.propTypes = {
-  words: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  words: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Block;
