@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BlockContainer from '../containers/BlockContainer';
 
 const Board = ({blocks}) => {
@@ -16,7 +17,7 @@ const Board = ({blocks}) => {
 };
 
 Board.propTypes = {
-  blocks: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  blocks: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Board;

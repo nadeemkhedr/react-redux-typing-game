@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TypeArea = ({text, onChange}) => {
   return (
@@ -7,7 +8,7 @@ const TypeArea = ({text, onChange}) => {
 };
 
 TypeArea.propTypes = {
-  text: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  text: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 export default TypeArea;
