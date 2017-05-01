@@ -18,7 +18,10 @@ export const blockWordRemove = (id, wordId) =>
   ({ type: BLOCK_WORD_REMOVE, id, wordId });
 
 export const blockGenerate = () => (dispatch, getState) => {
-  const numberOfWords = Math.floor(Math.random() * 2) + 4;
+  const gameOptions = getState().game;
+  const wordsMin = gameOptions.wordsPerBlockStart;
+  const wordsRandom = gameOptions.wordsPerBlockEnd - gameOptions.wordsPerBlockStart;
+  const numberOfWords = Math.floor(Math.random() * wordsRandom) + wordsMin;
   let wordIds = []
   for (var i = 1; i <= numberOfWords; i++) {
     let word = {

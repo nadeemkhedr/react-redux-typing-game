@@ -2,11 +2,13 @@ import { combineReducers } from 'redux';
 import blocks, * as fromBlocks from './blocks'
 import words, * as fromWords from './words'
 import input from './input';
+import game from './game';
 
 const rootReducer = combineReducers({
   words,
   blocks,
-  input
+  input,
+  game
 });
 
 export default rootReducer;
