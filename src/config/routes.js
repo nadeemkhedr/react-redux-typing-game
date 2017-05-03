@@ -1,7 +1,7 @@
 import React from 'react';
-import Game from '../components/Game';
+import GameContainer from '../containers/GameContainer';
 import { Route } from 'react-router-dom';
 
 export default (
-  <Route path="/" component={Game} />
+  <Route path="/" component={GameContainer} />
 );

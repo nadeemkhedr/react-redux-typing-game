@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TypeArea = ({text, onChange}) => {
-  return (
-    <input type="text" className="textarea-game" value={text} onChange={onChange} />
-  );
+class TypeArea extends React.Component {
+  componentDidMount() {
+    this.refs.input.focus();
+  }
+  render() {
+    return <input type="text" className="textarea-game" ref="input" value={this.props.text} onChange={this.props.onChange} />
+  };
 };
 
 TypeArea.propTypes = {
